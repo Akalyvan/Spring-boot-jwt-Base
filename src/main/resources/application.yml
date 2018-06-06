@@ -1,0 +1,25 @@
+server:
+  port: 8080
+  
+spring:
+  application:
+    name: Base
+ 
+ # Mysql DB   
+  profiles:
+    active: local
+  
+  mysql :  
+   datasource:
+    url: jdbc:mysql://localhost:3306/java
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 
+   
+   # Spring Data JPA configuration
+  jpa:
+    hibernate:
+      ddl-auto: update       # To be updated in real production usage!
+      show-sql: true
+      dialect: org.hibernate.dialect.MySQL5Dialect
+             
